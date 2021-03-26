@@ -10,7 +10,9 @@ public class ContaCorrente {
 	double especialUsado;
 	String status[];
 	
-	void mostrarInfo() {
+	public ContaCorrente() { }
+
+	public void mostrarInfo() {
 		System.out.println("Saldo: " +saldo);
 		System.out.println("Limite Especial: " + limiteEspecial);
 		}
