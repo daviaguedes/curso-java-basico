@@ -1,0 +1,41 @@
+package aula35;
+
+public class Calculadora {
+	
+	public static int fatorialNaoRecursivo(int num) {
+		int fatorial = 1;
+		for(int i = num; i>=2; i--) {
+			fatorial *=i;
+		}
+		return fatorial;
+	}
+
+	
+	public static int fatorialRecursivo(int num) {
+		
+		if(num==0) {
+			return 1;
+		}
+		
+		return num * fatorialRecursivo(num - 1);
+		
+	}
+	
+	public static int fibonacci(int num) {
+		
+		if(num < 2 ) {
+			return 1;
+		}
+			
+		return fibonacci(num - 1) + fibonacci(num - 2);
+		
+	}
+	
+	public static int somatorio(int num) {
+		
+		if(num == 1) {
+			return 1;
+		}
+		return num + somatorio(num - 1);
+	}
+}
