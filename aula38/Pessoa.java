@@ -1,4 +1,4 @@
-package aula37;
+package aula38;
 
 public class Pessoa {
 	
@@ -7,19 +7,9 @@ public class Pessoa {
 	private String telefone;
 	private String cpf;
 	
-	public Pessoa(String nome, String endereco, String telefone) {
-		super();
-		this.nome = nome;
-		this.endereco = endereco;
-		this.telefone = telefone;
-	}
-	
-	public Pessoa() {}
-
 	public String getNome() {
 		return nome;
 	}
-	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
