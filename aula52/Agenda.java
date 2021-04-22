@@ -16,9 +16,10 @@ public class Agenda {
 		
 		boolean cheia = true;
 		for(int i = 0; i<contatos.length; i++) {
-			if(contatos[i] != null) {
+			if(contatos[i] == null) {
 				contatos[i] = c;
 				cheia = false;
+				break;
 			}
 		}
 		
@@ -29,14 +30,28 @@ public class Agenda {
 		
 	}
 	
-	public void consultarContato(Contato c[], int id) throws ContatoNaoExisteException {
+	public int consultarContato(String nome) throws ContatoNaoExisteException {
+		
+		for(int i=0; i<contatos.length; i++) {
+			if(contatos[i] != null) {
+				if(contatos[i].getNome().equalsIgnoreCase(nome)) {
+					return i;
+				}
+			}
+		}
+		throw new ContatoNaoExisteException();
+	}
 
-		if(c[id] != null) {
-		System.out.println(c[id].toString());
+	public String toString() {
+		String info = null;
+		for(Contato c : contatos) {
+			if(c !=null) {
+				info = c.toString() + "\n";
+			}
 		}
-		else {
-			throw new ContatoNaoExisteException();
-		}
+		return info;
+		
+		
 	}
 	
 	
